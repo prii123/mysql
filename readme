@@ -1,0 +1,9 @@
+ejecutar servidor de docker php my admin y mysql
+
+1. docker-compose up -d
+
+
+- comandos para ejecutar y guardar las imagenes de docker
+
+1. docker build -t api/audit3 .   -----> este comando es para construir la imagen le coloca un nombre a la imagen
+2. docker run --name api-audotiras3 -p 3000:7000 -d api/audit3 -----> primer puerto es donde correra en el navegador el segundo es donde corre internamente el contenedor
