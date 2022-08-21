@@ -6,7 +6,7 @@ CREATE TABLE `detalle_retencion` (
   `periodo` varchar(10) NOT NULL,
   `base` int NOT NULL,
   `valor` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `documento` (
   `id` int NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE `documento` (
   `periodo` varchar(10) DEFAULT NULL,
   `hallazgo` int NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `empresas` (
   `id` int NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE `empresas` (
   `autorrenta` float NOT NULL,
   `logo` varchar(200) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `hallazgoz_y_correcciones` (
   `id` int NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE `hallazgoz_y_correcciones` (
   `idEmpresa` int DEFAULT NULL,
   `periodo` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `informedeauditoria` (
   `id` int NOT NULL,
@@ -57,23 +57,23 @@ CREATE TABLE `informedeauditoria` (
   `periodo` varchar(10) NOT NULL,
   `valMax` int NOT NULL,
   `valMin` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `tipo_documentos` (
   `id` int NOT NULL,
   `nombre` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 
 CREATE TABLE `tipo_retencion` (
   `id` int NOT NULL,
   `concepto` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `tipo_roles` (
   `id` int NOT NULL,
   `nombre_rol` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `totales_retencion` (
   `id` int NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE `totales_retencion` (
   `id_tipo_retencion` int NOT NULL,
   `base` int NOT NULL,
   `valor` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 CREATE TABLE `usuarios` (
   `id` int NOT NULL,
@@ -92,7 +92,7 @@ CREATE TABLE `usuarios` (
   `image_url` text,
   `idRol` int NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 ALTER TABLE `detalle_retencion`
   ADD PRIMARY KEY (`id`),

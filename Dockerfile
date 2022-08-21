@@ -1,1 +1,3 @@
-FROM mysql:5.7
+
+FROM php:8.0.0-apache
+RUN docker-php-ext-install mysqli
